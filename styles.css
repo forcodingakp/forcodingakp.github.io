@@ -94,10 +94,22 @@ nav ul li a:hover::after{
     transition: background 0.3s,transform 0.3s;
 }
 /* -----for icon size-------- */
-.Project-list div i{
+/* .Project-list div i{
     font-size: 30px;
     margin-bottom: 30px;
     color: #14a700df;
+} */
+
+.fa-solid.fa-microchip{
+    color: #ff0048;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.fa-brands.fa-pagelines{
+    color:#14a700df;
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 .Project-list div h2{
     font-size: 25px;
@@ -130,11 +142,26 @@ nav ul li a:hover::after{
     margin-top: 30px;
 
 }
-.contact-left p i{
-    color: #00ffff;
+.fa-brands.fa-linkedin{
+    color: #0b7fc8fe;
     margin-right: 15px;
     font-size: 25px;
 }
+.fa-brands.fa-github{
+    color: #e6e7e9;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.fa-brands.fa-instagram{
+    color: #f216ca;
+    margin-right: 15px;
+    font-size: 25px;
+}
+/* .contact-left p i{
+    color: #00ffff;
+    margin-right: 15px;
+    font-size: 25px;
+} */
 .social-icons a{
     text-decoration: none;
     font-size: 30px;
