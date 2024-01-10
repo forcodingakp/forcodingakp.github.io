@@ -6,34 +6,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Your Name - Personal Website</title>
+    <script src="https://kit.fontawesome.com/54dba81828.js" crossorigin="anonymous"></script>
+
+    <style>
+        .button {
+  background-color: #ff007b;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.9;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+        .button:hover {opacity: 1}
+        </style>
+
+
 </head>
 <body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="">
+            <ul id="sidemenu()">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p></p>
+            <h1>Hi, I'm <span>Aman</span> <br>Currently pursuing electronics and communtication engneering.</h1>
+        </div>
+    </div>
+</div>
+<!-- ------------------------projects------------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="Project-list">
+            <div>
+                <!-- ---------project1--------------- -->
+                
+                <h2>Smart Farming System <i class="fa-brands fa-pagelines"></i></h2>
+                <p>
+                    here the main focus is leaf disease detection using a large language mode with multiple sensors for getting the data from field.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <!-- ---------project2---------------- -->
+                
+                <h2>Arudino-UNO <i class="fa-solid fa-microchip"></i></h2>
+                <p>
+                    here the main focus is leaf disease detection using a large language mode with multiple sensors for getting the data from field.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------contact--------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> 22bec006@iiitdwd.ac.in</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <!-- <button type="button" onclick="window.location.href='images/my-cv.pdf'">Download CV</button> -->
+                <button class="button" onclick="window.location.href='images/my-cv.pdf'">Download CV</button>
 
-    <!-- About Me Section -->
-    <section id="about-me">
-        <h1>About Me</h1>
-        <p>Welcome to my personal website! I am a second-year B.Tech student at IIIT Dharwad, majoring in Electronics & Communication Engineering. My passion lies in combining electronics with machine learning and deep learning for innovative solutions.</p>
-    </section>
+                <!-----save resume name as my-cv.pdf------------>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email"required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button class="button">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Project 1:</strong> Brief description and link to the project repository.</li>
-            <li><strong>Project 2:</strong> Brief description and link to the project repository.</li>
-            <!-- Add more projects as needed -->
-        </ul>
-    </section>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright &copy Aman Kumar Prajapati </p>
+    </div>
+</div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li><strong>GitHub:</strong> <a href="https://github.com/forcodingakp" target="_blank">Your GitHub</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/aman-kumar-prajapati-1b8757259" target="_blank">Your LinkedIn</a></li>
-            <!-- Add more contact details as needed -->
-        </ul>
-    </section>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
 
+    function openmenu(){
+        sidemenu.style.right="0";
+
+    }
+    
+    function closemenu(){
+        sidemenu.style.right="-200";
+        
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzDlLhD9sEAmeQkTzE78b8D35SEo4MOEt5W7CZHUggmvl6ysE21QadgSsjmfJ6ihGMl/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },2000)
+            form.reset()
+
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  
 </body>
 </html>
