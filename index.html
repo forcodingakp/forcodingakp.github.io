@@ -6,34 +6,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Your Name - Personal Website</title>
+    <script src="https://kit.fontawesome.com/54dba81828.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        </style>
+
+
 </head>
 <body>
+ <!-- -----------------------home------------------    -->
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="">
+            <ul id="sidemenu()">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <div>
+                <div class="row">
+                    
+                    <div class="column">
+                        <h1><br><br>Hi, I'm <span>Aman</span> <br>Currently pursuing <br><span> Electronics and Communtication</span><br> engneering.</h1>
+                    </div>
+                    <div class="column">
+                        <img src="images/Man repairing motherboard(1).gif" style="height: 550px; width: 550px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------------about me------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+                <!-- ---------save the your image as user.png-----------  -->
 
-    <!-- About Me Section -->
-    <section id="about-me">
-        <h1>About Me</h1>
-        <p>Welcome to my personal website! I am a second-year B.Tech student at IIIT Dharwad, majoring in Electronics & Communication Engineering. My passion lies in combining electronics with machine learning and deep learning for innovative solutions.</p>
-    </section>
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm Aman Kumar Prajapati current in my 2nd year of college, interested in electronics and data-science</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>data-science</span><br>machine learning</li>
+                        <li><span>electronics</span><br>pcb-design</li>
+                        <li><span>web-development</span><br>HTML/CSS/Js</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>teaching assistant</span><br>ATL tinkering labs</li>
+                        <li><span>Project intern</span><br>IIIT Dharwad</li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Btech Electronics and Communication Engneering IIIT Dharwad</span></li>
+                        <li><span>BS Data-Science IIT Madras</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Project 1:</strong> Brief description and link to the project repository.</li>
-            <li><strong>Project 2:</strong> Brief description and link to the project repository.</li>
-            <!-- Add more projects as needed -->
-        </ul>
-    </section>
+<!-- ------------------------projects------------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="Project-list">
+            <div>
+                <!-- ---------project1--------------- -->
+                
+                <h2>Smart Farming System <i class="fa-brands fa-pagelines"></i></h2>
+                <p>
+                    here the main focus is leaf disease detection using a large language mode with multiple sensors for getting the data from field.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <!-- ---------project2---------------- -->
+                
+                <h2>Arudino-UNO <i class="fa-solid fa-microchip"></i></h2>
+                <p>
+                    Made a Arudino-UNO board from scratch. It includes designing the pcb in easy-eda software.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------contact--------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p class="email"><i class="fa-solid fa-envelope"></i> 22bec006@iiitdwd.ac.in</p>
+                <br>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <br>
+                <!-- <button type="button" onclick="window.location.href='images/my-cv.pdf'">Download CV</button> -->
+                <button class="button" onclick="window.location.href='images/my-cv.pdf'">Download CV</button>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li><strong>GitHub:</strong> <a href="https://github.com/YourGitHubUsername" target="_blank">Your GitHub</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">Your LinkedIn</a></li>
-            <!-- Add more contact details as needed -->
-        </ul>
-    </section>
+                <!-----save resume name as my-cv.pdf------------>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email"required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button class="button">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
 
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright &copy Aman Kumar Prajapati </p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right="0";
+
+    }
+    
+    function closemenu(){
+        sidemenu.style.right="-200";
+        
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzDlLhD9sEAmeQkTzE78b8D35SEo4MOEt5W7CZHUggmvl6ysE21QadgSsjmfJ6ihGMl/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },2000)
+            form.reset()
+
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  
 </body>
 </html>
